@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'ansible-playbook /home/salim/ansible-playbooks/image-ansible-playbook.yaml --user jenkins'
+		sh 'ansible-playbook /home/salim/ansible-playbooks/image-ansible-playbook.yaml --user salim'
             }
         }
     }

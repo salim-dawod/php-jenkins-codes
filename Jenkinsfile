@@ -1,10 +1,11 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'node:16.13.1-alpine' }
+    }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-		sh 'ansible-playbook /home/salim/ansible-playbooks/image-ansible-playbook.yaml --user salim'
+                sh 'node --version'
             }
         }
     }
